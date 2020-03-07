@@ -82,7 +82,7 @@ class FormProtectionComponent extends Component
         if (
             !in_array($request->getParam('action'), $this->_config['unlockedActions'], true)
             && $hasData
-            && $this->_config['validate']
+            && $this->_config['validatePost']
         ) {
             $session = $request->getSession();
             $session->start();
